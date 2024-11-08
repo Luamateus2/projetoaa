@@ -1,6 +1,7 @@
-import face_recognition as fr
 from engine import reconhece_face, get_rostos
+import face_recognition as fr
 
+# Carregar o rosto desconhecido
 desconhecido = reconhece_face("./img/desconhecido.jpeg")
 if(desconhecido[0]):
     rosto_desconhecido = desconhecido[1][0]
@@ -12,6 +13,5 @@ if(desconhecido[0]):
         resultado = resultados[i]
         if(resultado):
             print("Rosto do", nomes_dos_rostos[i], "foi reconhecido")
-
 else:
-    print("Nao foi encontrado nenhum rosto")
+    print("Não foi encontrado nenhum rosto")
